@@ -1,20 +1,28 @@
 import React, {useReducer} from 'react';
-import logo from './logo.svg';
-import './App.css';
 import players from "./players.json"
 import {POS_FILTER, ROLE_FILTER, SORT_NUM} from "./utils/action"
 import {Table, TableRow} from "./components/Table"
+import SortTab from "./components/SortTab"
 
 function App() {
 
-  const [roster, setRoster] = useReducer((state, action) => {
+  const [roster, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case SORT_NUM:
         var copy = state.allPlayers.slice()
-        var sortedPlayers = copy.sort((a,b) => a-b)
+        if (state.order === -1) {
+          var sortedPlayers = copy.sort((a,b) => a.number-b.number)
+          var order = 1
+        }
+        else {
+          var sortedPlayers = copy.sort((a,b) => b.number-a.number)
+          var order = -1
+        }
+
         return {
           ...state,
-          displayedPLayers: sortedPlayers
+          displayedPlayers: sortedPlayers,
+          order: order
         }
         break
 
@@ -34,19 +42,25 @@ function App() {
         })
         return {
           ...state,
-          displayedPLayers: filteredPlayers
+          displayedPlayers: filteredPlayers
         }
         break
     }
   }, {
     allPlayers: players,
-    displayedPLayers: players
+    displayedPlayers: players,
+    order: -1
   })
 
   return (
+    <div>
+      <SortTab reducer={[roster, dispatch]}/>
     <Table>
-      
+      {roster.displayedPlayers.map(player => {
+        return <TableRow key={player.id} player={player}/>
+      })}
     </Table>
+    </div>
   );
 }
 
