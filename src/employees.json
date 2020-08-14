@@ -1,0 +1,135 @@
+[
+    {
+        "name": "Mitchell Trubisky",
+        "number": 10,
+        "side": "Offense",
+        "position": "Quarterback"
+    },
+    {
+        "name": "Tarik Cohen",
+        "number": 29,
+        "side": "Offense",
+        "position": "Running Back"
+    },
+    {
+        "name": "Taylor Gabriel",
+        "number": 18,
+        "side": "Offense",
+        "position": "Wide Receiver"
+    },
+    {
+        "name": "Anthony Miller",
+        "number": 17,
+        "side": "Offense",
+        "position": "Wide Receiver"
+    },
+    {
+        "name": "Allen Robinson",
+        "number": 12,
+        "side": "Offense",
+        "position": "Wide Receiver"
+    },
+    {
+        "name": "J.P. Holtz",
+        "number": 81,
+        "side": "Offense",
+        "position": "Tight End"
+    },
+    {
+        "name": "Charles Leno Jr.",
+        "number": 72,
+        "side": "Offense",
+        "position": "Lineman"
+    },
+    {
+        "name": "James Daniels",
+        "number": 68,
+        "side": "Offense",
+        "position": "Lineman"
+    },
+    {
+        "name": "Cody Whitehair",
+        "number": 65,
+        "side": "Offense",
+        "position": "Lineman"
+    },
+    {
+        "name": "Rashaad Coward",
+        "number": 69,
+        "side": "Offense",
+        "position": "Lineman"
+    },
+    {
+        "name": "Bobby Massie",
+        "number": 70,
+        "side": "Offense",
+        "position": "Lineman"
+    },
+
+    {
+        "name": "Eddie Jackson",
+        "number": 39,
+        "side": "Defense",
+        "position": "Safety"
+    },
+    {
+        "name": "Ha Ha Clinton-Dix",
+        "number": 21,
+        "side": "Defense",
+        "position": "Safety"
+    },
+    {
+        "name": "Prince Amukamara",
+        "number": 20,
+        "side": "Defense",
+        "position": "Corner Back"
+    },
+    {
+        "name": "Kyle Fuller",
+        "number": 23,
+        "side": "Defense",
+        "position": "Corner Back"
+    },
+    {
+        "name": "Leonard Floyd",
+        "number": 94,
+        "side": "Defense",
+        "position": "Line Backer"
+    },
+    {
+        "name": "Roquan Smith",
+        "number": 58,
+        "side": "Defense",
+        "position": "Line Backer"
+    },
+    {
+        "name": "Danny Trevathan",
+        "number": 59,
+        "side": "Defense",
+        "position": "Line Backer"
+    },
+    {
+        "name": "Khalil Mack",
+        "number": 52,
+        "side": "Defense",
+        "position": "Line Backer"
+    },
+    {
+        "name": "Bilal Nichols",
+        "number": 98,
+        "side": "Defense",
+        "position": "Lineman"
+    },
+    {
+        "name": "Eddie Goldman",
+        "number": 91,
+        "side": "Defense",
+        "position": "Lineman"
+    },
+    {
+        "name": "Roy Robertson-Harris",
+        "number": 95,
+        "side": "Defense",
+        "position": "Lineman"
+    }
+]
