@@ -1,3 +1,5 @@
+import "./style.css"
+
 export function Table(props) {
     return (
         <table>
@@ -18,6 +20,8 @@ export function Table(props) {
 }
 
 export function TableRow() {
+    
+
     return (
         <tr>
             <td></td>
