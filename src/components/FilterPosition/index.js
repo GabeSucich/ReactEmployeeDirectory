@@ -43,6 +43,7 @@ export default function FilterPosition({ reducer }) {
                 </div>
             </form>
             <a className="waves-effect waves-light blue darken-4 btn-small" onClick={() => handleSubmit()}>Search by Position</a>
+            <br/>
 
             {invalid &&
                 <div className="invalid-alert orange darken-4 white-text">Enter a valid position</div>
