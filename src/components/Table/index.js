@@ -3,7 +3,7 @@ import "./style.css"
 
 export function Table(props) {
     return (
-        <div className="container table">
+        <div className="container table orange lighten-5">
             <table>
                 <thead>
                     <tr>

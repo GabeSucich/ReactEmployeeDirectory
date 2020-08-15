@@ -1,19 +1,31 @@
 import React, { useState } from "react"
-// import "./style.css"
+import "./style.css"
 import { POS_FILTER, ROLE_FILTER, SORT_NUM, SHOW_ALL } from "../../utils/action"
+
 
 export default function FilterPosition({ reducer }) {
 
     const [roster, dispatch] = reducer
     const [filter, setFilter] = useState('')
+    const [invalid, setValidation] = useState(false)
 
     function handleChange(event) {
         setFilter(event.target.value)
     }
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        dispatch({ type: POS_FILTER, position: filter })
+    const positionArr = ["Quarterback", "Running Back", "Wide Receiver", "Tight End", "Lineman", "Safety", "Corner Back", "Line Backer"]
+
+    function handleSubmit() {
+        if (positionArr.includes(filter)) {
+            dispatch({ type: POS_FILTER, position: filter })
+        }
+        else {
+            setValidation(true)
+            setTimeout(() => {
+                setValidation(false)
+            }, 1000)
+        }
+
         setFilter("")
 
     }
@@ -21,17 +33,25 @@ export default function FilterPosition({ reducer }) {
     return (
         <div>
             <form>
-                <input
-                    className="form-control"
-                    value={filter}
-                    onChange={handleChange}
-                />
-                <button onClick={(event) => handleSubmit(event)}>Submit</button>
+                <div>
+                    <input
+                        className="form-center input-field"
+                        value={filter}
+                        onChange={handleChange}
+                        placeholder="Position"
+                    />
+                </div>
             </form>
-            {roster.filtered &&
+            <a className="waves-effect waves-light blue darken-4 btn-small" onClick={() => handleSubmit()}>Search by Position</a>
 
-                <button onClick={() => dispatch({type: SHOW_ALL})}>Show All</button>
+            {invalid &&
+                <div className="invalid-alert orange darken-4 white-text">Enter a valid position</div>
             }
+            {roster.filtered &&
+                <a id="show-all" className="waves-effect waves-light orange darken-4 btn-small" onClick={() => dispatch({ type: SHOW_ALL })}>Show All Players</a>
+            }
+
+
         </div>
     )
 

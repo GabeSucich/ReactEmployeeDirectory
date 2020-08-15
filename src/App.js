@@ -5,13 +5,17 @@ import { Table, TableRow } from "./components/Table"
 import SortTab from "./components/SortTab"
 import FilterPosition from "./components/FilterPosition"
 import FilterSide from "./components/FilterSide"
+import Col from "./components/Col"
+import Row from "./components/Row"
+import Header from './components/Header';
+import "./Appstyle.css"
 
 function App() {
 
   const [roster, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case SORT_NUM:
-        var copy = state.allPlayers.slice()
+        var copy = state.displayedPlayers.slice()
         if (state.order === -1) {
           var sortedPlayers = copy.sort((a, b) => a.number - b.number)
           var order = 1
@@ -36,7 +40,8 @@ function App() {
         return {
           ...state,
           displayedPlayers: filteredPlayers,
-          filtered: true
+          filtered: true,
+          side: "both"
         }
         break
 
@@ -45,7 +50,8 @@ function App() {
           return {
             ...state,
             displayedPlayers: state.allPlayers,
-            side: "both"
+            side: "both",
+            filtered: false
           }
         }
         else {
@@ -55,17 +61,18 @@ function App() {
           return {
             ...state,
             displayedPlayers: filteredPlayers,
-            side: action.side
+            side: action.side,
+            filtered: false
           }
         }
         break
-      
-        case SHOW_ALL:
-          return {
-            ...state,
-            displayedPlayers: state.allPlayers,
-            filtered: false
-          }
+
+      case SHOW_ALL:
+        return {
+          ...state,
+          displayedPlayers: state.allPlayers,
+          filtered: false
+        }
     }
   }, {
     allPlayers: players,
@@ -76,10 +83,25 @@ function App() {
   })
 
   return (
-    <div>
-      <SortTab reducer={[roster, dispatch]} />
-      <FilterSide reducer={[roster, dispatch]} />
-      <FilterPosition reducer={[roster, dispatch]} />
+    <div className="container">
+      <Header />
+
+      <Row>
+        <Col size="col s6 push-s3">
+          <SortTab reducer={[roster, dispatch]} />
+        </Col>
+      </Row>
+      <Row>
+        <FilterSide reducer={[roster, dispatch]} />
+      </Row>
+      <Row>
+        <Col size="col s8 push-s2 m6 push-m3">
+          <div className="center-align">
+            <FilterPosition reducer={[roster, dispatch]} />
+          </div>
+        </Col>
+      </Row>
+
       <Table>
         {roster.displayedPlayers.map(player => {
           return <TableRow key={player.id} player={player} />

@@ -1,5 +1,21 @@
 .table {
     height: 50vh;
     overflow: scroll;
-    margin-top: 10%
+    margin-top: 4%;
+    border: 10px;
 }
+
+#heading {
+    position: absolute;
+}
+
+th {
+    color: blue;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+

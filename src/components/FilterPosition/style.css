@@ -1,0 +1,17 @@
+.form-center {
+    text-align: center;
+}
+
+.invalid-alert {
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+#show-all {
+    margin-top: 2%
+}
+
+.input-field {
+    border-bottom: 1px solid orange !important;
+    box-shadow: 0 1px 0 0 orange !important;
+  }
