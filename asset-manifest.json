@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TeamRoster/static/css/main.edb98739.chunk.css",
-    "main.js": "/TeamRoster/static/js/main.1183ff0e.chunk.js",
-    "main.js.map": "/TeamRoster/static/js/main.1183ff0e.chunk.js.map",
+    "main.js": "/TeamRoster/static/js/main.26bb3997.chunk.js",
+    "main.js.map": "/TeamRoster/static/js/main.26bb3997.chunk.js.map",
     "runtime-main.js": "/TeamRoster/static/js/runtime-main.cb5e527c.js",
     "runtime-main.js.map": "/TeamRoster/static/js/runtime-main.cb5e527c.js.map",
     "static/js/2.476149ad.chunk.js": "/TeamRoster/static/js/2.476149ad.chunk.js",
     "static/js/2.476149ad.chunk.js.map": "/TeamRoster/static/js/2.476149ad.chunk.js.map",
     "index.html": "/TeamRoster/index.html",
-    "precache-manifest.3b95d66cd407cdce7356472c3eefe859.js": "/TeamRoster/precache-manifest.3b95d66cd407cdce7356472c3eefe859.js",
+    "precache-manifest.2b55443b469c7bb75e24328f166a915c.js": "/TeamRoster/precache-manifest.2b55443b469c7bb75e24328f166a915c.js",
     "service-worker.js": "/TeamRoster/service-worker.js",
     "static/css/main.edb98739.chunk.css.map": "/TeamRoster/static/css/main.edb98739.chunk.css.map",
     "static/js/2.476149ad.chunk.js.LICENSE.txt": "/TeamRoster/static/js/2.476149ad.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.cb5e527c.js",
     "static/js/2.476149ad.chunk.js",
     "static/css/main.edb98739.chunk.css",
-    "static/js/main.1183ff0e.chunk.js"
+    "static/js/main.26bb3997.chunk.js"
   ]
 }
