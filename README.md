@@ -35,7 +35,7 @@ npm start
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Materialize](https://materializecss.com/about.html)
-* [React](https://www.npmjs.com/package/mysql)
+* [React](https://reactjs.org/)
 
 ## Application Functionality
 
@@ -49,12 +49,13 @@ While users are viewing the roster, they can:
 
 #### See the [deployed link](https://gabesucich.github.io/TeamRoster/) here
 
+***
+
 ### Gabriel Sucich
 
-![Profile](markdown/profile.png)
+<img src="markdown/profile.png" width="15%">
 
 - [Portfolio](https://gabesucich.github.io/UpdatedPortfolio/)
 - [Github](https://github.com/GabeSucich)
 - [LinkedIn](www.linkedin.com/in/gabriel-sucich-6a28a71a8)
 
-See also the list of any other [contributors](https://github.com/GabeSucich/TeamRoster/contributors) who on this project.
